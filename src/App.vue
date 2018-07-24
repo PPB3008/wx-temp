@@ -1,22 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <img src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="typescript">
+// import HelloWorld from './components/HelloWorld.vue'
+import Vue from 'vue';
+import { Component } from 'vue-property-decorator';
+export default class App extends Vue {
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
