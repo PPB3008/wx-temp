@@ -1,18 +1,20 @@
 const argv = require('minimist')(process.argv.slice(2));
 
 const ownProxy = [
-    { domain: 'wx', url: 'https://api.weixin.qq.com' },
-    // { domain: 'wx', url: 'https://api.weixin.qq.com/card/create' }
+    { domain: `wx`, target: `https://api.weixin.qq.com` },
+    // { domain: 'wx', target: 'https://api.weixin.qq.com/card/create' }
+    { domain: `wxown`, target: `http://devmp.chidaoni.com` },
+    { domain: `so`, target: `http://devso.chidaoni.net` },
 ]
 
-let proxy = {};
+const proxy = {};
 ownProxy.forEach(el => {
-    const proxyConfig = `/_/${el}`;
+    const proxyConfig = `/_/${el.domain}`;
     proxy[proxyConfig] = {
-        target: el.url,
+        target: el.target,
         changOrigin: true,
         pathRewrite (path, req) {
-            console.log(path, proxyConfig, req);
+            console.log(path,proxyConfig);
             return path.replace(proxyConfig, '');
         },
     }
