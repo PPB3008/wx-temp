@@ -5,20 +5,20 @@ Vue.use(router);
 export default new router({
     routes: [
         {
-            path: '/wx',
+            path: '/',
             name: 'Index',
             component: () => import('@/views/index.vue'),
-            children: [
-                {
-                    path: 'memeber',
-                    component: () => import('@/views/wx/member.vue'),
-                }
-            ],
         },
         {
-            path: 'memeber',
+            path: '/Memeber',
             name: 'Member',
-            component: () => import('@/views/wx/member.vue'),
+            component: () => import('@/views/wx/template.vue'),
+            children: [
+                { 
+                    path: 'AddCoupon', 
+                    component: () => import('@/views/wx/add-coupon.vue'),
+                },
+            ],
         }
     ],
     mode: 'history',

@@ -1,14 +1,10 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
 <script lang="typescript">
-// import HelloWorld from './components/HelloWorld.vue'
-import Vue from 'vue';
-import { Component } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 export default class App extends Vue {
 
 }

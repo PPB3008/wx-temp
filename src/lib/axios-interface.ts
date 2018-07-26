@@ -26,12 +26,13 @@ const Interface = {
         const Sign = getSignature(params);
         // let Source = 0;
         // let BrandId = 
-        config.headers = Object.assign(config.headers || {},{ Ts, AppId, Sign, Organize, Source: 0 })
+        config.headers = Object.assign(config.headers || {},{ Ts, AppId, Sign, Organize, Source: 0 });
         console.log(config);
         return config;
     },
-    InterfaceAfter (response) {
-        
+    InterfaceAfter (config) {
+        // ...logic
+        return config;
     }
 }
 

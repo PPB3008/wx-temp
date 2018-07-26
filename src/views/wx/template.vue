@@ -1,15 +1,18 @@
 <template>
     <div class="wx-member">
-        111
+        <router-view></router-view>
     </div>
 </template>
 <script lang="ts">
 import { Component,Vue } from 'vue-property-decorator';
 @Component({})
-export default class Member extends Vue {
+export default class Template extends Vue {
       
 }
 </script>
 <style lang="scss" scoped>
-
+    .wx-member {
+        display: flex;
+        flex: 1;
+    }
 </style>
