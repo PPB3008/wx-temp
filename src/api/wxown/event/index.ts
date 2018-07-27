@@ -1,6 +1,6 @@
 import { proxy } from '../handler';
 import { CodeObj } from '@/code';
-const getEvent = function () {
-    return proxy.get(`/mp/v1/wx/event`,{})
+export const getEvent = function (AppId) {
+    return proxy.post(`/mp/v1/wx/event/${AppId}`,{})
     .then(response => response.data as CodeObj<string>);
 }

@@ -13,7 +13,7 @@ const Interface = {
         const newUrl = URI(url);
         newUrl.setQuery({
           region: [0,0,0].join(','),
-        });
+        }); 
         config.url = newUrl.resource();
         const Ts = Math.ceil(Date.now());
         const AppId = parseInt(SignData.AppId);

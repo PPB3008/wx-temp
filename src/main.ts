@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
 import router from '@/router';
 import store from '@/store';
 import Component  from 'vue-class-component';
@@ -10,7 +10,8 @@ Component.registerHooks([
   'beforeRouterUpdate',
 ]);
 
-
+const VueScroll = require('vue-scroller')
+Vue.use(VueScroll.default);
 
 new Vue({
   router,
